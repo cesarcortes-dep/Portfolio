@@ -1,7 +1,8 @@
 import React from "react";
+import "./skills.css";
 import { Frontend } from "./Frontend";
 import { ProductOwner } from "./ProductOwner";
-import "./skills.css";
+
 
 export const Skills = () => {
   return (
