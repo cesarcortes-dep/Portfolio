@@ -16,7 +16,7 @@ export const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            Frontend developer, I create web pages with a HUGEEEE... and humble heart
+          I create web pages with responsible developing, new user-facing features, determining the structure and design of web pages, building reusable codes, optimizing page loading times, and using a variety of markup languages to create the web pages.
           </p>
 
           <a download="" href={CV} className="button button--flex">Download CV

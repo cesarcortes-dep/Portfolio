@@ -24,7 +24,7 @@
 }
 .services__button {
   color: var(--title-color);
-  font-size: var(--samll-font-size);
+  font-size: var(--small-font-size);
   display: inline-flex;
   align-items: center;
   column-gap: 0.25;
@@ -107,9 +107,51 @@
     font-size: var(--small-font-size);
 }
 
+.services__button2{
+    color: white;
+    margin-top: 2rem;
+    padding: 12px 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Active Modal */
 
 .active-modal{
     opacity: 1;
     visibility: visible;
+}
+
+
+
+/* <!-- ============= BREAKPOINTS ============= --> */
+
+/* for large devices */
+@media screen and (max-width: 992px) {
+ .services__container{
+    grid-template-columns: repeat(2, 218px);
+ }
+}
+
+/* for medium devices */
+@media screen and (max-width: 768px) {
+    .services__container{
+        grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+/* for medium devices */
+@media screen and (max-width: 576px) {
+    .services__container{
+        grid-template-columns: repeat(1, 1fr);
+     }
+}
+
+/* for medium devices */
+@media screen and (max-width: 350px) {
+    .services__container{
+        grid-template-columns: repeat(1, 1fr);
+     }
 }
