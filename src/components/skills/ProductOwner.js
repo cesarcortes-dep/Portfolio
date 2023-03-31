@@ -11,7 +11,7 @@ export const ProductOwner = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">HTML</h3>
+              <h3 className="skills__name">Strategizing and presenting <br/>ideas to stakeholders.</h3>
               <span className="skills__level">Advanced</span>
             </div>
           </div>
@@ -19,7 +19,23 @@ export const ProductOwner = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">HTML</h3>
+              <h3 className="skills__name">Defining product features <br/> according to customer needs.</h3>
+              <span className="skills__level">Advanced</span>
+            </div>
+          </div>
+          {/* -------------- */}
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">Leading the development process.</h3>
+              <span className="skills__level">Advanced</span>
+            </div>
+          </div>
+          {/* -------------- */}
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">Managing and prioritizing product backlog items.</h3>
               <span className="skills__level">Advanced</span>
             </div>
           </div>
