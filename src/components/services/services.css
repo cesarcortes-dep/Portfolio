@@ -152,6 +152,11 @@
 /* for medium devices */
 @media screen and (max-width: 350px) {
     .services__container{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 0.5fr);
+     }
+
+     .services__content{
+      padding-right: 6rem;
      }
 }
+
