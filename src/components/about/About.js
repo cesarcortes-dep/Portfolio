@@ -3,13 +3,13 @@ import "./about.css";
 
 import AboutImg from "../../assets/profile2.JPG";
 
-import CV from "../../assets/John-Cv.pdf";
+import CV from "../../assets/CvI Cesar Cortes.pdf";
 import {Info} from "./Info";
 
 export const About = () => {
   return (
     <section className="about section" id="about">
-      <h2 className="section__title">About me</h2>
+      <h2 className="section__title">About meee</h2>
       <span className="section__subtitle">My introduction</span>
       <div className="about__container container grid">
         <img src={AboutImg} alt="" className="about__img" />
