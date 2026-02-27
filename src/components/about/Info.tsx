@@ -1,5 +1,3 @@
-import React from "react";
-
 function Info() {
   return (
     <div className="about__info grid">
