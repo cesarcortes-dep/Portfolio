@@ -1,6 +1,6 @@
 import "./about.css";
 import AboutImg from "../../assets/about.jpg";
-import CV from "../../assets/Cesar-Cortes-Cv.pdf";
+import CV from "../../assets/CV-Cesar-Cortes.pdf";
 import Info from "./Info";
 function About() {
   return (
