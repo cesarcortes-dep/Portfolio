@@ -1,5 +1,3 @@
-import React from "react";
-
 function ScrollDown() {
   return (
     <div className="home__scroll">

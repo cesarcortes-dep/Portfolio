@@ -1,4 +1,9 @@
+import { useState } from "react";
+import ContactModal from "./ContactModal";
+
 function Data() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="home__data">
       <h1 className="home__title">
@@ -59,7 +64,7 @@ function Data() {
         accessibility, and modern UI development.
       </p>
 
-      <a href="#contact" className="button button--flex">
+      <button className="button button--flex" onClick={() => setShowModal(true)}>
         Contact Me
         <svg
           className="button__icon"
@@ -78,7 +83,8 @@ function Data() {
             fill="var(--container-color)"
           />
         </svg>
-      </a>
+      </button>
+      {showModal && <ContactModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }

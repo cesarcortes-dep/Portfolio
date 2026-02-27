@@ -1,0 +1,65 @@
+.contactmodal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.contactmodal__dialog {
+  background: var(--body-color);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  width: min(720px, 92%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.contactmodal__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.contactmodal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.contactmodal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contactmodal__label {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.contactmodal__input,
+.contactmodal__textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--container-color);
+  resize: vertical;
+}
+
+.contactmodal__submit {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .contactmodal__dialog {
+    padding: 1rem;
+  }
+}

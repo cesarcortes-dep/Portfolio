@@ -1,0 +1,106 @@
+.skills__container {
+  grid-template-columns: repeat(2, 350px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+.skills__content {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem 4rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.skills__content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.skill__title {
+  font-size: var(--h3-font-size);
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.skills__box {
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.skills__group {
+  display: grid;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+.skills__data {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+.skills__data i {
+  font-size: 1rem;
+  color: var(--title-color);
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+  color: var(--title-color);
+  margin: 0;
+}
+
+.skills__level {
+  font-size: var(--tiny-font-size);
+  color: var(--text-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .skills__container {
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__content {
+    padding: 1.5rem 2rem;
+  }
+
+  .skills__box {
+    column-gap: 1.5rem;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .skills__box {
+    column-gap: 1.25rem;
+  }
+
+  .skills__content {
+    padding: 1rem 1.5rem;
+  }
+
+  .skill__title {
+    font-size: var(--normal-font-size);
+  }
+
+  .skills__name {
+    font-size: var(--small-font-size);
+  }
+}
