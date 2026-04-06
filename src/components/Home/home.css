@@ -137,16 +137,6 @@
   }
 }
 
-.home__scroll-name {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-  margin-left: var(--mb-0-5);
-  margin-left: 2px;
-}
-.home__scroll-arrow {
-  font-size: 1.25rem;
-}
-
 /*=============== BREAKPOINTS ===============*/
 
 @media screen and (max-width: 992px) {

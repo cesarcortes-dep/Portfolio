@@ -14,9 +14,12 @@
   color: var(--title-color);
   margin: 0 var(--mb-1);
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+  max-width: 200px;
 }
 
 .qualification__button:hover {
@@ -42,11 +45,15 @@
 }
 
 .qualification__content {
-  display: none;
+  grid-area: 1 / 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .qualification__content-active {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .qualification__data {

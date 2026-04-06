@@ -2,7 +2,7 @@ function Info() {
   return (
     <div className="about__info grid">
       <div className="about__box">
-        <i className="bx  bx-medal-star-alt-2 about__icon"></i>
+        <i className="bx bx-award about__icon"></i>
         <h3 className="about__title">My Experience</h3>
         <span className="about__subtitle">
           5+ years of experience in JavaScript, React, and React Native

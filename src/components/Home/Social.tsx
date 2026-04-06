@@ -6,6 +6,7 @@ function Social() {
         href="https://www.linkedin.com/in/c%C3%A9sar-mateo-cort%C3%A9s-le%C3%B3n-b823a2206/"
         className="home__social-icon"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <i className="uil uil-linkedin"></i>
       </a>
@@ -14,6 +15,7 @@ function Social() {
         href="https://github.com/cesarcortes-dep"
         className="home__social-icon"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <i className="uil uil-github"></i>
       </a>

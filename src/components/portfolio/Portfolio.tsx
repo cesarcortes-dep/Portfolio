@@ -27,12 +27,12 @@ function Portfolio() {
 
             <a
               href={p.href}
-              className="button button--flex "
+              className="button button--flex"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Download
-              <i className="uil uil-arrow-right portfolio__icon"></i>
+              View Project
+              <i className="uil uil-eye portfolio__icon"></i>
             </a>
           </article>
         ))}

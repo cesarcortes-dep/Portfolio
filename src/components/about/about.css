@@ -16,8 +16,8 @@
 }
 
 .about__info {
-  grid-template-columns: repeat(3, 140px);
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   margin-bottom: var(--mb-2);
 }
 
@@ -26,7 +26,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   text-align: center;
-  padding: 1rem 0.5rem;
+  padding: 1.25rem 0.75rem;
   transition: all 0.3s ease;
 }
 
