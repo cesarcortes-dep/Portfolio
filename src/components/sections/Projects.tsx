@@ -66,11 +66,12 @@ export function Projects() {
               key={project.id}
               project={project}
               index={i + 1}
-              // Asymmetric: first + last span more cols on md
+              // Asymmetric: visual-heavy first row, tight 4+2 row, wide closer
               className={cn(
-                i === 0 && "md:col-span-4",
-                i === 1 && "md:col-span-2",
-                i === 2 && "md:col-span-6",
+                i === 0 && "md:col-span-6",
+                i === 1 && "md:col-span-4",
+                i === 2 && "md:col-span-2",
+                i === 3 && "md:col-span-6",
               )}
             />
           ))}
@@ -180,43 +181,62 @@ function ProjectCard({
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       whileHover="hover"
       className={cn(
-        "group relative flex flex-col justify-between gap-10 overflow-hidden border border-border bg-surface p-6 transition-colors hover:border-accent md:p-8",
+        "group relative flex flex-col overflow-hidden border border-border bg-surface transition-colors hover:border-accent",
         className,
       )}
     >
-      <div>
-        <div className="mono mb-4 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.2em] text-fg-muted">
-          <span>
-            <span className="text-accent">
-              0{index + 1}
-            </span>{" "}
-            · {project.client}
-          </span>
-          <span>{project.period}</span>
+      {project.image && (
+        <div className="relative aspect-16/10 overflow-hidden border-b border-border md:aspect-21/9">
+          <motion.div
+            variants={{ hover: { scale: 1.04 } }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </motion.div>
+          <div className="absolute inset-0 bg-linear-to-t from-bg/60 to-transparent" />
         </div>
-        <h3 className="display-bold text-2xl text-fg md:text-3xl">
-          {project.title}
-        </h3>
-        <p className="mono mt-2 text-xs text-fg-dim">
-          {project.role}
-        </p>
-        <p className="mt-5 text-sm font-light leading-relaxed text-fg-muted">
-          {project.summary}
-        </p>
+      )}
 
-        <ul className="mt-6 space-y-2 border-l border-border-strong pl-4">
-          {project.highlights.slice(0, 2).map((h) => (
-            <li
-              key={h}
-              className="text-sm font-light leading-relaxed text-fg"
-            >
-              {h}
-            </li>
-          ))}
-        </ul>
+      <div className="flex flex-1 flex-col justify-between gap-10 p-6 md:p-8">
+        <div>
+          <div className="mono mb-4 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.2em] text-fg-muted">
+            <span>
+              <span className="text-accent">
+                0{index + 1}
+              </span>{" "}
+              · {project.client}
+            </span>
+            <span>{project.period}</span>
+          </div>
+          <h3 className="display-bold text-2xl text-fg md:text-3xl">
+            {project.title}
+          </h3>
+          <p className="mono mt-2 text-xs text-fg-dim">{project.role}</p>
+          <p className="mt-5 text-sm font-light leading-relaxed text-fg-muted">
+            {project.summary}
+          </p>
+
+          <ul className="mt-6 space-y-2 border-l border-border-strong pl-4">
+            {project.highlights.slice(0, 2).map((h) => (
+              <li
+                key={h}
+                className="text-sm font-light leading-relaxed text-fg"
+              >
+                {h}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <StackRow stack={project.stack} />
       </div>
-
-      <StackRow stack={project.stack} />
 
       <motion.span
         aria-hidden

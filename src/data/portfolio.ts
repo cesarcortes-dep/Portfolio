@@ -107,6 +107,31 @@ export const portfolio: Portfolio = {
       featured: true,
     },
     {
+      id: "metacheck",
+      client: "Personal project",
+      title: "MetaCheck",
+      role: "Full-stack · Open source",
+      period: "2026",
+      summary:
+        "Free meta-tag auditing tool. Paste a URL, see how it renders on Google / Facebook / X / LinkedIn, and get a scored technical report as a downloadable PDF — no account, nothing stored.",
+      highlights: [
+        "Hardened server-side fetch: Zod validation, SSRF guard across redirects, 8 s timeout, 2 MB body cap, Upstash Redis rate limiting per IP.",
+        "Lazy-loaded PDF generation with @react-pdf/renderer so the initial bundle stays small; four pixel-accurate platform preview cards driven off a single parser.",
+      ],
+      stack: [
+        "Next.js 16",
+        "TypeScript",
+        "Tailwind v4",
+        "Cheerio",
+        "Zod",
+        "Upstash Redis",
+        "React-PDF",
+        "Radix UI",
+      ],
+      href: "https://meta-check-two.vercel.app/",
+      image: "/projects/metacheck-og.png",
+    },
+    {
       id: "rsm-task-management",
       client: "RSM",
       title: "Task Management Platform",
